@@ -4,6 +4,8 @@
 
 The main page of the application is a convenient dashboard where users can select a random movie and view a list of top movies by IMDb rating.
 
+<img src='./public/screenshot.png'>
+
 On a separate page, the user can view a list of existing movie genres, select one of them and go to the page with movies that belong to it.
 
 When clicking on a movie card, the user is taken to its page. It contains a detailed description of the film, a button for viewing the trailer and a button for adding the movie to favorites or removing it from this list.
