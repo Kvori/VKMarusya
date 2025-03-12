@@ -1,4 +1,6 @@
-Description of behavior:
+# The project is implemented using the ```React``` framework and the ```Vite``` compiler.
+
+### Description of behavior:
 
 The main page of the application is a convenient dashboard where users can select a random movie and view a list of top movies by IMDb rating.
 
@@ -11,3 +13,9 @@ The function of adding a movie to favorites is available only for authorized use
 The user also has access to the function of searching for a movie by title, which can be used by clicking on the search field in the navigation section.
 
 A special feature of the application is the ability to select a random movie. This can be done on the main page by clicking on the button next to the "Favorites" section.
+
+## Usage
+
+To run in development mode, you must enter the command ```npm run dev```.
+
+For product assembly, you need to enter the command ```npm run build```. The assembled project will be located in the repository in the folder ```dist```.
