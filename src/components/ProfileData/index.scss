@@ -1,0 +1,92 @@
+.profile-data {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+
+        &__item {
+            display: flex;
+            gap: 0 16px;
+
+            &__icon {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 30px;
+            }
+
+            &__label {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+
+            &__naming {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+            }
+
+            .initials {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__btn-logout {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 16px 48px;
+        background-color: var(--primary-color);
+        border-radius: 28px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 992px) {
+    .profile-data {
+        padding: 40px 40px 0 40px;
+    }
+}
+
+@media(max-width: 620px) {
+    .profile-data {
+        &__btn-logout {
+            width: 100%;
+        }
+
+        &__list__item {
+            &__label {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &__naming {
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .profile-data {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

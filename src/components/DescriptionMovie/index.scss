@@ -1,0 +1,54 @@
+.dscr-movie {
+    padding: 20px 0;
+    color: #fff;
+
+    &__title {
+        margin-bottom: 64px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+    }
+
+    &__list {
+        .tr {
+            display: flex;
+            width: 100%;
+        }
+
+        .tr:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        .td {
+            width: 100%;
+            line-height: 1.15;
+        }
+
+        .td-box {
+            display: flex;
+
+            &__dscr {
+                text-wrap: nowrap;
+            }
+        }
+
+        .dots {
+            position: relative;
+            width: 100%;
+            
+        }
+
+        .dots::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            bottom: 4px;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+        }
+
+        .td-left {
+            max-width: 320px;
+        }
+    }
+}

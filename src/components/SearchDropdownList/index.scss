@@ -1,0 +1,83 @@
+.drop-down {
+    position: absolute;
+    background-color: rgba(57, 59, 60, 1);
+    top: 50px;
+    right: 0;
+    width: 560px;
+    z-index: 10000;
+    border-radius: 8px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 14px 0;
+
+        &__item {
+            
+            &__link {
+                display: grid;
+                padding: 20px 28px;
+                grid-template-columns: 52px 1fr;
+                grid-template-rows: repeat(1, 1fr);
+                gap: 0 16px;
+                align-items: flex-start;
+            }
+
+            &__img {
+                max-width: 40px;
+                object-fit: cover;
+                grid-column: 1/2;
+                grid-row: 1/3;
+            }
+
+            &__title {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                font-size: 18px;
+                line-height: 24px;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .about-movie__card__left__top {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                margin-bottom: 0;
+
+                &__item {
+                    font-size: 14px;
+                    line-height: 20px;
+
+                }
+
+                .raiting {
+                    font-size: 12px;
+                    line-height: 16px;
+                    padding: 3px 8.25px;
+
+                    .raiting-svg {
+                        width: 9.5px;
+                    }
+                }
+            }
+
+            &__link:hover {
+                background-color: rgb(88, 88, 88);
+            }
+        }
+    }
+}
+
+.no-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@media(max-width: 992px) {
+    
+}

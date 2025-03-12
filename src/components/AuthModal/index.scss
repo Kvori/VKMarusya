@@ -1,0 +1,193 @@
+.modal-bg {
+    position: fixed;
+    z-index: 10000;
+    padding: 20px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.auth-modal {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+    max-height: 100vh;
+    align-items: center;
+    padding: 64px 40px;
+    background-color: #fff;
+    border-radius: 24px;
+    position: relative;
+
+    &__close-btn {
+        position: absolute;
+        right: -72px;
+        top: 0;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 25px;
+        line-height: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    &__close-btn:hover {
+        background-color: #888888;
+    }
+
+    &__close-btn:focus {
+        background-color: #888888;
+    }
+
+    &__logo {
+        max-width: 132px;
+        max-height: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__btn-register {
+        position: relative;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #000;
+        transition: all .3s ease-in-out;
+    }
+
+    &__btn-register:active {
+        color: var(--primary-color-dark);
+    }
+
+    &__btn-register::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        left: 50%;
+        border-bottom: 3px solid var(--color-border-bottom-btn);
+        transition: all .3s ease-in-out;
+    }
+
+    &__btn-register:hover::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    &__btn-register:focus::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__input {
+        width: 100%;
+        padding: 16px 16px 16px 52px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__input:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &__input:last-child {
+        margin-bottom: 24px;
+    }
+
+    &__btn-submit {
+        padding: 13px 0;
+        width: 100%;
+        border-radius: 28px;
+        margin-bottom: 24px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        border: 3px solid var(--primary-color);
+    }
+
+    &__btn-submit:hover:not(:active) {
+        border-color: #000;
+    }
+
+    &__btn-submit:focus:not(:active) {
+        border-color: #000;
+    }
+
+    &__btn-submit:active {
+        border-color: var(--primary-color-dark);
+    }
+
+    &__error {
+        font-size: 18px;
+        color: red;
+        text-align: center;
+    }
+
+    &__input:hover {
+        border-color: var(--color-like);
+    }
+
+    &__input:focus {
+        border-color: var(--color-like);
+    }
+
+    &__label svg path {
+        transition: all .3s ease-in-out;
+    }
+
+    &__label:hover svg:not(.invalid) path {
+        fill: var(--color-like);
+    }
+
+    &__label:focus svg:not(.invalid) path {
+        fill: var(--color-like);
+    }
+
+    &__label {
+        width: 100%;
+        position: relative;
+    }
+
+    &__svg {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+    }
+}
+
+.auth-form__input.invalid {
+    border-color: red;
+}
+
+.auth-form__svg.invalid path {
+    fill: red;
+}
+
+.auth-form__input:focus+.auth-form__svg:not(.invalid) path {
+    fill: var(--color-like);
+}
+
+@media(max-width: 600px) {
+    .auth-modal {
+        padding-bottom: 32px;
+
+        &__close-btn {
+            right: 8px;
+            top: 8px;
+        }
+    }
+}

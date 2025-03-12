@@ -1,0 +1,176 @@
+.about-movie {
+    padding: 32px 0 20px 0;
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin-right: 20px;
+
+            justify-content: center;
+
+            &__title {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                margin-bottom: 16px;
+            }
+
+            &__plot {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 32px;
+                opacity: 70%;
+                margin-bottom: 60px;
+            }
+        }
+
+        &__poster {
+            max-width: 680px;
+            width: 100%;
+            max-height: 552px;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 16px;
+            background-color: grey;
+        }
+    }
+}
+
+.card-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &__item {
+        border-radius: 28px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__item:disabled {
+        opacity: 0.5;
+    }
+}
+
+.secondary-btn-box {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.raiting-svg {
+    margin-right: 4px;
+}
+
+.size-style-high {
+    padding: 17px 45px;
+}
+
+.size-style-small {
+    padding: 18px 23px;
+    line-height: 0;
+}
+
+.btn-refresh svg {
+    transition: transform .3s ease-in-out;
+}
+
+.btn-refresh:hover:not(:active) svg {
+    transform: rotate(-30deg);
+    transition: transform .3s ease-in-out;
+}
+
+.btn-refresh:active svg {
+    transform: rotate(360deg);
+    transition: transform .3s ease-in-out;
+}
+
+.btn-like svg {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-like:active svg {
+    scale: 1.2;
+    transition: all 0.3s ease-in-out;
+}
+
+@media(max-width: 992px) {
+    .about-movie {
+        &__card {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            gap: 24px;
+
+            &__poster {
+                grid-row: 1/2;
+                max-width: 100%;
+            }
+
+            &__left {
+                grid-row: 2/3;
+                max-width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 620px) {
+
+    .secondary-btn-box {
+        flex-wrap: nowrap;
+    }
+
+    .card-btns {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .card-btns__item.primary-btn {
+        width: 100%;
+    }
+
+    .about-btn {
+        width: 100%;
+    }
+
+    .main-page-style-card-btns {
+        flex-wrap: wrap;
+    }
+
+    .main-page-style-secondary-btn-box {
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+    .about-movie__card {
+        &__poster {
+            max-height: 234px;
+        }
+
+        &__left {
+            &__title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            &__plot {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .size-style-small {
+        padding: 17px;
+    }
+}

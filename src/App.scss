@@ -1,0 +1,186 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #67A5EB;
+    --secondary-color: rgb(54, 54, 54);
+    --primary-color-dark: #1f80ee;
+    --color-like: #B4A9FF;
+    --color-like-dark: #8674fa;
+    --color-border-bottom-btn: #DC5DFC;
+    --color-link-hover: #B4A9FF;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Play';
+    src: url('./assets/fonts/Play-Regular.woff2');
+    src: url('./assets/fonts/Play-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Play';
+    src: url('./assets/fonts/Play-Bold.woff2');
+    src: url('./assets/fonts/Play-Bold.ttf');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Play', 'sans-serif';
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+
+body {
+    background: linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%) fixed,
+        linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 200%) fixed;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1;
+    font-size: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.primary-btn:hover:not(:active) {
+    background-color: #fff;
+    color: #000000;
+}
+
+.primary-btn:focus:not(:active) {
+    background-color: #fff;
+    color: #000000;
+}
+
+.primary-btn:active {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.secondary-btn:hover:not(:active) {
+    background-color: #fff;
+    color: #000000;
+}
+
+.secondary-btn:focus:not(:active) {
+    background-color: #fff;
+    color: #000000;
+}
+
+.secondary-btn:active {
+    color: var(--color-like-dark);
+}
+
+
+.secondary-btn svg path {
+    transition: all .3s ease-in-out;
+}
+
+.secondary-btn:hover:not(:active) svg path {
+    fill: #000;
+    transition: all .3s ease-in-out;
+}
+
+.secondary-btn:focus:not(:active) svg path {
+    fill: #000;
+    transition: all .3s ease-in-out;
+}
+
+.secondary-btn:active svg path {
+    fill: var(--color-like-dark);
+    transition: all .3s ease-in-out;
+}
+
+.title-offset {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-link-def {
+    transition: all .3s ease-in-out;
+}
+
+.nav-link-def:hover {
+    color: var(--color-link-hover);
+}
+
+.nav-link-def:focus {
+    color: var(--color-link-hover);
+}
+
+@media(max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+}
