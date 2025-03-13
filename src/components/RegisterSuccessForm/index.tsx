@@ -8,7 +8,7 @@ interface RegisterSuccessFormProps {
 export const RegisterSuccessForm = ({ setRegisterSuccess, setFormState }: RegisterSuccessFormProps) => {
     const handleBtnLogin = () => {
         setFormState('')
-        setRegisterSuccess(true)
+        setRegisterSuccess(false)
     }
     return (
         <div className="register-success-form">

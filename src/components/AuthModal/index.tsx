@@ -1,5 +1,5 @@
 import "./index.scss";
-import {  useState } from "react";
+import { useState } from "react";
 import { LoginForm } from "../LoginForm";
 import { modalState } from "../../api/selectors";
 import { useDispatch } from "react-redux";
@@ -13,7 +13,7 @@ interface AuthModal {
 
 export const AuthModal = () => {
     const [formState, setFormState] = useState("");
-    const [registerSuccess, setRegisterSuccess] = useState(true);
+    const [registerSuccess, setRegisterSuccess] = useState(false);
     const dispatch = useDispatch();
 
     const handleBtnRegister = () => {
@@ -22,7 +22,7 @@ export const AuthModal = () => {
 
     const handleCloseBtn = () => {
         dispatch(modalLoginState())
-        setRegisterSuccess(true)
+        setRegisterSuccess(false)
         setFormState("")
     }
 
@@ -37,13 +37,14 @@ export const AuthModal = () => {
                     </button>
                     <img className="auth-modal__logo" src="/auth-logo.svg" alt="" />
                     {registerSuccess
-                        ? (<>
+                        ? <RegisterSuccessForm setFormState={setFormState} setRegisterSuccess={setRegisterSuccess} />
+                        : (<>
                             {formState === "register"
                                 ? <RegisterForm setRegisterSuccess={setRegisterSuccess} />
                                 : <LoginForm />}
                             <button className="auth-modal__btn-register" onClick={handleBtnRegister}>{(formState === "register" ? 'У меня есть пароль' : 'Регистрация')}</button>
                         </>)
-                        : <RegisterSuccessForm setFormState={setFormState} setRegisterSuccess={setRegisterSuccess} />}
+                    }
                 </div>
             </div>
         )

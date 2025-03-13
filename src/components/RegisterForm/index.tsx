@@ -41,7 +41,7 @@ export const RegisterForm = ({ setRegisterSuccess }: RegisterFormProps) => {
     }, queryClient)
 
     const errorFilter = (error: Error) => {
-        if (typeof (error.message) === 'object' && JSON.parse(error.message).error === "User already exists") {
+        if (JSON.parse(error.message).error === "User already exists") {
             return <span className="auth-form__error">Пользователь с таким email уже существует</span>
         } else {
             if (error.message === 'Not Found') {
